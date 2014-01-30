@@ -14,10 +14,9 @@ public class Nexus5LWPSettings extends PreferenceActivity
         super.onCreate(icicle);
 
         PreferenceManager pm = getPreferenceManager();
+        pm.setDefaultValues(getApplicationContext(), R.xml.nexus5lwp_settings, false);
         pm.setSharedPreferencesName(Nexus5LWP.SHARED_PREFS_NAME);
-
         addPreferencesFromResource(R.xml.nexus5lwp_settings);
-
     }
 
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
