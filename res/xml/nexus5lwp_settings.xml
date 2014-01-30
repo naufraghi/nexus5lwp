@@ -17,6 +17,6 @@
             android:summary="Choose performance or battery life"
             android:defaultValue="0"
             />
-            <!-- default del codice == 0 -->
+            <!-- default from java code -->
         </PreferenceCategory>
 </PreferenceScreen>
