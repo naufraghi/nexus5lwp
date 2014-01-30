@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bbbz.nexus5lwp"
+    android:versionCode="14"
+    android:versionName="1.4">
+
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="19"/>
+    <uses-feature android:name="android.software.live_wallpaper" />
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+
+    <application
+        android:label="@string/wallpapers"
+        android:icon="@drawable/ic_launcher_wallpaper">
+
+        <service
+            android:label="@string/wallpaper_nexus5lwp"
+            android:name=".Nexus5LWP"
+            android:description="@string/wallpaper_description"
+            android:permission="android.permission.BIND_WALLPAPER">
+
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/nexus5lwp" />
+        </service>
+
+        <activity
+            android:label="@string/nexus5_settings"
+            android:name=".Nexus5LWPSettings"
+            android:theme="@android:style/Theme.Black"
+            android:exported="true">
+        </activity>
+        
+    </application>
+</manifest>

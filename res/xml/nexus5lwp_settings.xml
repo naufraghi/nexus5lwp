@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="nexus5lwp_settings"
+        android:title="@string/nexus5_settings"
+        >
+
+        <!-- Advanced preferences -->
+        <PreferenceCategory
+            android:summary="Advanced"
+            android:title="Advanced">
+        <ListPreference
+            android:key="target_fps"
+            android:title="Power Management"
+            android:entries="@array/target_fps_entries"
+            android:entryValues="@array/target_fps_values"
+            android:summary="Choose performance or battery life"
+            />
+        </PreferenceCategory>
+</PreferenceScreen>
